@@ -10,15 +10,18 @@ function convert(box1,box2){
   var selection2 = $("#"+box2+">input[type='radio']:checked").val();
 
   var result = textarea1.val().split(" ");
-
-  if (selection1 == "b" && selection2 == "d"){
+  if (textarea1.val() == ""){
+    result = [""];
+  }else if (selection1 == "b" && selection2 == "d"){
     //Convert from binary to denary
-    result = parseInt(textarea1.val(), 2);
+    for (i=0; i < result.length; i++){
+      result[i] = parseInt(result[i], 2);
+    }
 
   } else if (selection1 == "b" && selection2 == "h"){
     //Convert from binary to hex
-    for (i = 0; i < result.length; i++) {
-      result[i] = result[i].toString(16);
+    for (i=0; i < result.length; i++) {
+      result[i] = (+parseInt(result[i],2)).toString(16);
       if (result[i].length % 2 != 0) {
         result[i] = "0" + result[i];
       }
@@ -42,13 +45,21 @@ function convert(box1,box2){
 
   } else if (selection1 == "d" && selection2 == "h"){
     //Convert denary to hex
-
+    for (i=0; i < result.length; i++){
+      result[i] = (+result[i]).toString(16);
+    }
 
   } else if (selection1 == "d" && selection2 == "t"){
     //Convert denary to text
-    for (i=0; i<result.length; i++){
+    for (i=0; i < result.length; i++){
       result[i] = String.fromCharCode(result[i]);
     }
+  } else if (selection == "h" && selection2 == "b"){
+      //Convert hex to Binary
+      //for (i=0; i < result.length; i++){
+      //  result[i] =
+      //}
+  //}
 
   }
   textarea2.val(result.join(""));
