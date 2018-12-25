@@ -54,13 +54,22 @@ function convert(box1,box2){
     for (i=0; i < result.length; i++){
       result[i] = String.fromCharCode(result[i]);
     }
-  } else if (selection == "h" && selection2 == "b"){
-      //Convert hex to Binary
-      //for (i=0; i < result.length; i++){
-      //  result[i] =
-      //}
-  //}
+  } else if (selection1 == "h" && selection2 == "d"){
+    //Convert hex to Denary
+    for (i=0; i < result.length; i++){
+      result[i] = parseInt(result[i], 16);
+    }
+  } else if (selection1 == "h" && selection2 == "b"){
+    //Convert hex to Binary
+    for (i=0; i < result.length; i++){
+      result[i] = (+parseInt(result[i], 16)).toString("2");
+    }
 
+  } else if (selection1 == "h" && selection2 == "t"){
+    //Convert hex to text
+    for (i=0; i < result.length; i++){
+      result[i] = String.fromCharCode(parseInt(result[i], 16));
+    }
   }
   textarea2.val(result.join(""));
 }
