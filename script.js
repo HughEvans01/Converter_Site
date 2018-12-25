@@ -12,14 +12,14 @@ function convert(box1,box2){
   var result = textarea1.val().split(" ");
   if (textarea1.val() == ""){
     result = [""];
-  }else if (selection1 == "b" && selection2 == "d"){
-    //Convert from binary to denary
+  } else if (selection1 == "b" && selection2 == "d"){
+    //Convert from Binary to Denary
     for (i=0; i < result.length; i++){
       result[i] = parseInt(result[i], 2);
     }
 
   } else if (selection1 == "b" && selection2 == "h"){
-    //Convert from binary to hex
+    //Convert from Binary to Hexadecimal
     for (i=0; i < result.length; i++) {
       result[i] = (+parseInt(result[i],2)).toString(16);
       if (result[i].length % 2 != 0) {
@@ -28,13 +28,13 @@ function convert(box1,box2){
     }
 
   } else if (selection1 == "b" && selection2 == "t"){
-    //Convert from binary to text
+    //Convert from Binary to Text
     for (i = 0; i < result.length; i++) {
       result[i] = String.fromCharCode(parseInt(result[i], 2));
     }
 
   } else if (selection1 == "d" && selection2 == "b"){
-    //Convert denary to binary
+    //Convert Denary to Binary
     for (i=0; i<result[i]; i++){
       result[i] = (+result[i]).toString("2");
       while (result[i].length % 8 != 0){
@@ -42,34 +42,60 @@ function convert(box1,box2){
       }
     }
 
-
   } else if (selection1 == "d" && selection2 == "h"){
-    //Convert denary to hex
+    //Convert Denary to Hexadecimal
     for (i=0; i < result.length; i++){
       result[i] = (+result[i]).toString(16);
     }
 
   } else if (selection1 == "d" && selection2 == "t"){
-    //Convert denary to text
+    //Convert Denary to Text
     for (i=0; i < result.length; i++){
       result[i] = String.fromCharCode(result[i]);
     }
+
   } else if (selection1 == "h" && selection2 == "d"){
-    //Convert hex to Denary
+    //Convert Hexadecimal to Denary
     for (i=0; i < result.length; i++){
       result[i] = parseInt(result[i], 16);
     }
+
   } else if (selection1 == "h" && selection2 == "b"){
-    //Convert hex to Binary
+    //Convert Hexadecimal to Binary
     for (i=0; i < result.length; i++){
       result[i] = (+parseInt(result[i], 16)).toString("2");
+      while (result[i].length % 8 != 0){
+        result[i] = "0" + result[i];
+      }
     }
 
   } else if (selection1 == "h" && selection2 == "t"){
-    //Convert hex to text
+    //Convert Hexadecimal to Text
     for (i=0; i < result.length; i++){
       result[i] = String.fromCharCode(parseInt(result[i], 16));
     }
+
+  } else if (selection1 == "t" && selection2 == "d"){
+    //Convert Text to Denary
+    for (i=0; i < result.length; i++){
+      result[i] = result[i].charCodeAt(0);
+    }
+
+  } else if (selection1 == "t" && selection2 == "b"){
+    //Convert Text to Binary
+    for (i=0; i < result.length; i++){
+      result[i] = (+result[i].charCodeAt(0)).toString("2");
+      while (result[i].length % 8 != 0){
+        result[i] = "0" + result[i];
+      }
+    }
+
+  } else if (selection1 == "t" && selection2 == "h"){
+    //Convert Text to Hexadecimal
+    for (i=0; i < result.length; i++){
+      result[i] = (+result[i].charCodeAt(0)).toString(16);
+    }
   }
+  //Output result to page
   textarea2.val(result.join(""));
 }
