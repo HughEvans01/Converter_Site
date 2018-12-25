@@ -20,4 +20,4 @@ https://htmlpreview.github.io/https://github.com/HughEvans01/Converter_Site
 
 ## Contributing
 
-Pull requests are welcome. FOr major changes, please open an issue first to discuss what you wouldlike to change.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
