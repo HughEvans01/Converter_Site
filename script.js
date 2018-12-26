@@ -12,12 +12,13 @@ function convert(box1,box2){
   var result = textarea1.val().split(" ");
   if (textarea1.val() == ""){
     result = [""];
+    result=result.join(" ");
   } else if (selection1 == "b" && selection2 == "d"){
     //Convert from Binary to Denary
     for (i=0; i < result.length; i++){
       result[i] = parseInt(result[i], 2);
     }
-
+    result=result.join(" ");
   } else if (selection1 == "b" && selection2 == "h"){
     //Convert from Binary to Hexadecimal
     for (i=0; i < result.length; i++) {
@@ -26,13 +27,13 @@ function convert(box1,box2){
         result[i] = "0" + result[i];
       }
     }
-
+    result=result.join(" ");
   } else if (selection1 == "b" && selection2 == "t"){
     //Convert from Binary to Text
     for (i = 0; i < result.length; i++) {
       result[i] = String.fromCharCode(parseInt(result[i], 2));
     }
-
+    result=result.join("");
   } else if (selection1 == "d" && selection2 == "b"){
     //Convert Denary to Binary
     for (i=0; i<result[i]; i++){
@@ -41,25 +42,25 @@ function convert(box1,box2){
         result[i] = "0" + result[i];
       }
     }
-
+    result=result.join(" ");
   } else if (selection1 == "d" && selection2 == "h"){
     //Convert Denary to Hexadecimal
     for (i=0; i < result.length; i++){
       result[i] = (+result[i]).toString(16);
     }
-
+    result=result.join(" ");
   } else if (selection1 == "d" && selection2 == "t"){
     //Convert Denary to Text
     for (i=0; i < result.length; i++){
       result[i] = String.fromCharCode(result[i]);
     }
-
+    result=result.join("");
   } else if (selection1 == "h" && selection2 == "d"){
     //Convert Hexadecimal to Denary
     for (i=0; i < result.length; i++){
       result[i] = parseInt(result[i], 16);
     }
-
+    result=result.join(" ");
   } else if (selection1 == "h" && selection2 == "b"){
     //Convert Hexadecimal to Binary
     for (i=0; i < result.length; i++){
@@ -68,19 +69,19 @@ function convert(box1,box2){
         result[i] = "0" + result[i];
       }
     }
-
+    result=result.join(" ");
   } else if (selection1 == "h" && selection2 == "t"){
     //Convert Hexadecimal to Text
     for (i=0; i < result.length; i++){
       result[i] = String.fromCharCode(parseInt(result[i], 16));
     }
-
+    result=result.join("");
   } else if (selection1 == "t" && selection2 == "d"){
     //Convert Text to Denary
     for (i=0; i < result.length; i++){
       result[i] = result[i].charCodeAt(0);
     }
-
+    result=result.join(" ");
   } else if (selection1 == "t" && selection2 == "b"){
     //Convert Text to Binary
     for (i=0; i < result.length; i++){
@@ -89,13 +90,16 @@ function convert(box1,box2){
         result[i] = "0" + result[i];
       }
     }
-
+    result=result.join(" ");
   } else if (selection1 == "t" && selection2 == "h"){
     //Convert Text to Hexadecimal
     for (i=0; i < result.length; i++){
       result[i] = (+result[i].charCodeAt(0)).toString(16);
     }
+    result=result.join(" ");
+  } else {
+    result=result.join(" ");
   }
   //Output result to page
-  textarea2.val(result.join(""));
+  textarea2.val(result);
 }
