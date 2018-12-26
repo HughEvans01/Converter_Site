@@ -16,7 +16,7 @@ OR
 
 Follow this link
 
-https://htmlpreview.github.io/https://github.com/HughEvans01/Converter_Site/index.html
+https://hughevans01.github.io/Converter_Site/
 
 ## Contributing
 
