@@ -1,6 +1,6 @@
 # Converter  Site
 
-Converter Site is a simple web project which allows conversion between several data types
+Converter Site is a simple web project which allows conversion between several data types.
 
 ## Installation
 
@@ -14,9 +14,7 @@ With local copy: open index.html with browser of your choice.
 
 OR
 
-Follow this link
-
-https://hughevans01.github.io/Converter_Site/
+Without local copy: open  https://hughevans01.github.io/Converter_Site/ with browser of your choice.
 
 ## Contributing
 

@@ -1,0 +1,11 @@
+#converter > fieldset {
+  background-color: #F0F0F0;
+}
+
+textarea {
+  width: 100%;
+}
+
+fieldset * {
+  vertical-align: middle;
+}
