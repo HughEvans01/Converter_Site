@@ -109,7 +109,7 @@ function convert(box1,box2){
     result=result.join(" ");
     console.log(result);
   } else {
-    var result = "";
+    var result = textarea1.val();
   }
   //Output result to page
   textarea2.val(result);
