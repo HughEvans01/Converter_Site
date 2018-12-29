@@ -10,11 +10,11 @@ Get a local copy
 
 ## Usage
 
-> With local copy: open index.html with browser of your choice.
+'''With local copy: open index.html with browser of your choice.'''
 
 OR
 
-> Without local copy: open  https://hughevans01.github.io/Converter_Site/ with browser of your choice.
+'''Without local copy: open  '''https://hughevans01.github.io/Converter_Site/ with browser of your choice.'''
 
 ## Contributing
 
