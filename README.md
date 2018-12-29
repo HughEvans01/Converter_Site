@@ -10,7 +10,7 @@ Get a local copy
 
 ## Usage
 
-With local copy: open index.html with browser of your choice.
+With local copy: open the index.html in your copy of the repository with browser of your choice.
 
 OR
 
